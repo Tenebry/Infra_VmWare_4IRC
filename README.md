@@ -4,10 +4,10 @@
 Membres : 
 * Maxence Bohard
 * Lucas Philippe
-* 
+
 ## Contexte
 
-Ce projet consiste en un Lab sur VMware pour appréhender la virtualisation ainsi que la solution.
+Ce projet consiste en un Lab d'une semaine sur VMware pour appréhender la virtualisation ainsi que la solution.
 
 le projet se découpe en plusieurs briques : 
 
@@ -26,6 +26,15 @@ le projet se découpe en plusieurs briques :
 * **Datacenter & Cluster:**
 
 * **ESXI & VCenter:**
+
+
+
+
+
+
+
+
+
 
 
 
