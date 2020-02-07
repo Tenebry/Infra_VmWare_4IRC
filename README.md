@@ -20,6 +20,9 @@ Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI
 	* On peux aussi creer une tâche automatique :
 
 * **DRS :**
+	
+	* DRS permet un bascule de charge automatique sur les différents hôtes ESXI d'un même cluster. Il suffit d'activer la fonctionnalité et de la configuré pour que celle çi soit en marche :
+	* De la même façon on peux mettre en place une tâche automatique dé vérification DRS : 
 
 
 * **VMotion :**
