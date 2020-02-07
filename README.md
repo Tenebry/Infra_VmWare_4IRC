@@ -29,9 +29,10 @@ Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI
 DRS permet un bascule de charge automatique sur les différents hôtes ESXI d'un même cluster. 
 
 	* Il suffit d'activer la fonctionnalité et de la configuré pour que celle çi soit en marche :
-	![DRS](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
+	![DRS](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/DRS.PNG?raw=true)
 	* De la même façon on peux mettre en place une tâche automatique dé vérification DRS : 
-	![DRS setting](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
+	![DRS setting](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/SettingDRS.PNG?raw=true)
+	![DRS setting 2](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/SettingDRS-2.PNG?raw=true)
 	
 
 * **VMotion :**
