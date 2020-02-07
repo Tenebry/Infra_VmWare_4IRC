@@ -1,4 +1,3 @@
-
 # Projet virtualisation sur VMware - 4IRC
 
 Membres : 
@@ -12,7 +11,11 @@ Ce projet consiste en un Lab d'une semaine sur VMware pour appréhender la virtu
 le projet se découpe en plusieurs briques : 
 
 * **Update manager :**
+Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patch et les mises à niveaux.
 
+	* Pour le configurer c'est assez simple. Il faut se rendre sur l'onglet Update Manager du menu depuis Vcenter :
+	* Puis créer une "baseline" qui match ce qu'on souhaite faire, dans notre cas les patch seulement :
+  * Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster :
 
 * **DRS :**
 
@@ -20,6 +23,8 @@ le projet se découpe en plusieurs briques :
 * **VMotion :**
 
 La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. Pour le mettre en place, il suffit de créer sur les hotes un adapteur réseau NIC Vmkernel sur le vlan Vmotion et de cocher l'option Vmotion. Pour faire l'essai, il suffit de se connecter sur Vcenter et de se rendre sur une Vm --> faire clic droit puis migrer --> migrer la ressource de calcul et le stockage --> puis de choisir l'hote.
+
+![vmotion](https://user-images.githubusercontent.com/47632799/74013834-a2470080-498d-11ea-9168-eaceee4fc4a8.png)
 
 * **Stockage partagé :**
 
