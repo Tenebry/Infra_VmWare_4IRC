@@ -19,7 +19,7 @@ Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI
 	* Puis créer une "baseline" qui match ce que l'on souhaite faire, dans notre cas les patchs seulement :
 	* Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster via le menu "mise à jour" de ceu-çi :
 	* Enfin on peux vérifier la conformité et lancer les mises à jours depuis l'onglet dédier dans le cluster :
-	* On peux aussi creer une tâche automatique :
+	* On peux aussi creer une tâche automatique de vérification via l'onglet mise à jour du cluster:
 
 * **DRS :**
 DRS permet un bascule de charge automatique sur les différents hôtes ESXI d'un même cluster. 
