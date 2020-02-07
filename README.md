@@ -10,6 +10,29 @@ Ce projet consiste en un Lab d'une semaine sur VMware pour appréhender la virtu
 Le schéma de notre infrastructure est identique à celui du sujet.
 le projet se découpe en plusieurs briques : 
 
+
+
+* **Datacenter & Cluster:**
+Afin de pouvoir bénéficier de toutes les fonctionnalités, il faut installer sur l'un des hotes Vcenter afin de pouvoir gérer notre infra et nos clusters. Nous lui attribuons une adresse IP (10.0.0.10) sur le LAN Management afin de pouvoir accéder à l'interface web.
+Ainsi, nous pouvons ajouter nos hotes (10.0.0.1 & 10.0.0.2) avec leurs adresses IP et créer notre cluster avec les options désirées.
+Ici c'est DRS qui nous intéresse car nous ne pouvons tester HA.
+![cluster](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/cluster.png?raw=true)
+
+* **Stockage partagé :**
+Afin d'avoir un accès aux fonctions de hautes disponibilités, drs, fault tolérance etc.. il est nécessaire de posséder un espace de stockage partagé dans lequel nous déplaçerons nos VM afin que tous les hotes du cluster puisse y accéder. Dans notre infrastructure, nous utiliserons Freenas pour créer nos LUN que nous connecterons à notre cluster. Bien entendu, si l'hote qui heberge notre stockage partagé tombe, nous perdons les VM qui sont à l'intérieur, si cela était possible, il aurait fallu redonder notre serveur freenas, mais nous n'avons pas assez d'hotes pour ça.
+
+![partage](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/stockage_partag%C3%A9.png?raw=true)
+
+Il suffit de Migrer les VM voulues dans l'espace partagé LUN :
+
+![lun](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
+
+* **Vlans** *
+
+Pour respecter l'infra, il faut créer 4 Vlans pour les différents usages. Pour cela, il faut aller dans les paramètres réseaux des hotes puis de créer des groupes de ports. Puis d'ajouter des cartes réseaux sur nos VM.
+
+![vlan](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/vlan.png?raw=true)
+
 * **Update manager :**
 Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patchs et les mises à niveaux.
 
@@ -42,22 +65,8 @@ La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. 
 ![migration](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/migration.PNG?raw=true)
 
 
-* **Stockage partagé :**
-Afin d'avoir un accès aux fonctions de hautes disponibilités, drs, fault tolérance etc.. il est nécessaire de posséder un espace de stockage partagé dans lequel nous déplaçerons nos VM afin que tous les hotes du cluster puisse y accéder. Dans notre infrastructure, nous utiliserons Freenas pour créer nos LUN que nous connecterons à notre cluster. Bien entendu, si l'hote qui heberge notre stockage partagé tombe, nous perdons les VM qui sont à l'intérieur, si cela était possible, il aurait fallu redonder notre serveur freenas, mais nous n'avons pas assez d'hotes pour ça.
 
-![partage](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/stockage_partag%C3%A9.png?raw=true)
 
-Il suffit de Migrer les VM voulues dans l'espace partagé LUN :
-
-![lun](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
-
-* **Datacenter & Cluster:**
-Afin de pouvoir bénéficier de toutes les fonctionnalités, il faut installer sur l'un des hotes Vcenter afin de pouvoir gérer notre infra et nos clusters. Nous lui attribuons une adresse IP (10.0.0.10) sur le LAN Management afin de pouvoir accéder à l'interface web.
-Ainsi, nous pouvons ajouter nos hotes (10.0.0.1 & 10.0.0.2) avec leurs adresses IP et créer notre cluster avec les options désirées.
-Ici c'est DRS qui nous intéresse car nous ne pouvons tester HA.
-![cluster](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/cluster.png?raw=true)
-
-* **ESXI & VCenter:**
 
 
 
