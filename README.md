@@ -26,6 +26,7 @@ La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. 
 
 ![vmotion](https://user-images.githubusercontent.com/47632799/74013834-a2470080-498d-11ea-9168-eaceee4fc4a8.png)
 
+https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/migration.PNG?raw=true
 * **Stockage partagé :**
 
 
