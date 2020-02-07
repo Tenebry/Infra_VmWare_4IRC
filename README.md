@@ -8,7 +8,9 @@ Membres :
 
 Ce projet consiste en un Lab d'une semaine sur VMware pour appréhender la virtualisation ainsi que la solution.
 
-le projet se découpe en plusieurs briques : 
+le projet se découpe en plusieurs briques décrite dans la fonction turoriel
+
+## Tutoriel
 
 * **Update manager :**
 Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patch et les mises à niveaux.
