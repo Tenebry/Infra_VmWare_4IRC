@@ -36,7 +36,6 @@ DRS permet un bascule de charge automatique sur les différents hôtes ESXI d'un
 	
 
 * **VMotion :**
-
 La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. Pour le mettre en place, il suffit de créer sur les hotes un adapteur réseau NIC Vmkernel sur le vlan Vmotion et de cocher l'option Vmotion. Pour faire l'essai, il suffit de se connecter sur Vcenter et de se rendre sur une Vm --> faire clic droit puis migrer --> migrer la ressource de calcul et le stockage --> puis de choisir l'hote.
 
 ![vmotion](https://user-images.githubusercontent.com/47632799/74013834-a2470080-498d-11ea-9168-eaceee4fc4a8.png)
@@ -44,7 +43,6 @@ La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. 
 
 
 * **Stockage partagé :**
-
 Afin d'avoir un accès aux fonctions de hautes disponibilités, drs, fault tolérance etc.. il est nécessaire de posséder un espace de stockage partagé dans lequel nous déplaçerons nos VM afin que tous les hotes du cluster puisse y accéder. Dans notre infrastructure, nous utiliserons Freenas pour créer nos LUN que nous connecterons à notre cluster. Bien entendu, si l'hote qui heberge notre stockage partagé tombe, nous perdons les VM qui sont à l'intérieur, si cela était possible, il aurait fallu redonder notre serveur freenas, mais nous n'avons pas assez d'hotes pour ça.
 
 ![partage](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/stockage_partag%C3%A9.png?raw=true)
@@ -54,7 +52,6 @@ Il suffit de Migrer les VM voulues dans l'espace partagé LUN :
 ![lun](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
 
 * **Datacenter & Cluster:**
-
 Afin de pouvoir bénéficier de toutes les fonctionnalités, il faut installer sur l'un des hotes Vcenter afin de pouvoir gérer notre infra et nos clusters. Nous lui attribuons une adresse IP (10.0.0.10) sur le LAN Management afin de pouvoir accéder à l'interface web.
 Ainsi, nous pouvons ajouter nos hotes (10.0.0.1 & 10.0.0.2) avec leurs adresses IP et créer notre cluster avec les options désirées.
 Ici c'est DRS qui nous intéresse car nous ne pouvons tester HA.
