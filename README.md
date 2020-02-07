@@ -13,12 +13,12 @@ le projet se découpe en plusieurs briques décrite dans la fonction turoriel
 ## Tutoriel
 
 * **Update manager :**
-Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patch et les mises à niveaux.
+Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patchs et les mises à niveaux.
 
 	* Pour le configurer c'est assez simple. Il faut se rendre sur l'onglet Update Manager du menu depuis Vcenter :
-	* Puis créer une "baseline" qui match ce qu'on souhaite faire, dans notre cas les patch seulement :
-	* Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster :
-	* Enfin on peux vérifier la conformité et lancé les mise à jours depuis l'onglet dédier dans le cluster :
+	* Puis créer une "baseline" qui match ce que l'on souhaite faire, dans notre cas les patchs seulement :
+	* Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster via le menu "mise à jour" de ceu-çi :
+	* Enfin on peux vérifier la conformité et lancer les mises à jours depuis l'onglet dédier dans le cluster :
 	* On peux aussi creer une tâche automatique :
 
 * **DRS :**
