@@ -32,10 +32,11 @@ La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. 
 
 Afin d'avoir un accès aux fonctions de hautes disponibilités, drs, fault tolérance etc.. il est nécessaire de posséder un espace de stockage partagé dans lequel nous déplaçerons nos VM afin que tous les hotes du cluster puisse y accéder. Dans notre infrastructure, nous utiliserons Freenas pour créer nos LUN que nous connecterons à notre cluster. Bien entendu, si l'hote qui heberge notre stockage partagé tombe, nous perdons les VM qui sont à l'intérieur, si cela était possible, il aurait fallu redonder notre serveur freenas, mais nous n'avons pas assez d'hotes pour ça.
 
+![partage](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/stockage_partag%C3%A9.png?raw=true)
 
 Il suffit de Migrer les VM voulues dans l'espace partagé LUN :
 
-
+![lun](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
 
 * **Datacenter & Cluster:**
 
