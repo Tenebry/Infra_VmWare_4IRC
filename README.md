@@ -20,8 +20,7 @@ Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI
 	![baseline](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/Baseline.png?raw=true)
 	* Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster via le menu "mise à jour" de ceux-çi :
 	![attached_baseline](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/BaselineAttached.PNG?raw=true)
-	* Enfin on peux vérifier la conformité et lancer les mises à jours depuis l'onglet dédier dans le cluster :
-	* On peux aussi creer une tâche automatique de vérification via l'onglet mise à jour du cluster:
+	* Enfin on peux vérifier la conformité et lancer les mises à jours depuis l'onglet dédier dans le cluster. On peux aussi creer une tâche automatique de vérification via l'onglet mise à jour du cluster:
 	![MAJ & planifier](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/Planifier.PNG?raw=true)
 	
 	
