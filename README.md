@@ -25,6 +25,8 @@ le projet se découpe en plusieurs briques :
 
 * **Datacenter & Cluster:**
 
+* **ESXI & VCenter:**
+
 
 
 ## Le  réseau Virtuel
