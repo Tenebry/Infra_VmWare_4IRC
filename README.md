@@ -19,6 +19,7 @@ le projet se découpe en plusieurs briques :
 
 * **VMotion :**
 
+La fonction Vmotion permet la migration de VM à chaud sans impact utilisateur. Pour le mettre en place, il suffit de créer sur les hotes un adapteur réseau NIC Vmkernel sur le vlan Vmotion et de cocher l'option Vmotion. Pour faire l'essai, il suffit de se connecter sur Vcenter et de se rendre sur une Vm --> faire clic droit puis migrer --> migrer la ressource de calcul et le stockage --> puis de choisir l'hote.
 
 * **Stockage partagé :**
 
