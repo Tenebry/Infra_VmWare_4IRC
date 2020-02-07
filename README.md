@@ -11,14 +11,27 @@ Ce projet consiste en un Lab d'une semaine sur VMware pour appréhender la virtu
 le projet se découpe en plusieurs briques : 
 
 * **Update manager :**
-Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patch et les mises à niveaux.
+Update manager permet de vérifier et de patcher automatiquement les hôtes ESXI d'un cluster et/ou d'un datacenter. Cela inclus les extensions tel que VMware-tools, les patchs et les mises à niveaux.
 
 	* Pour le configurer c'est assez simple. Il faut se rendre sur l'onglet Update Manager du menu depuis Vcenter :
-	* Puis créer une "baseline" qui match ce qu'on souhaite faire, dans notre cas les patch seulement :
-  * Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster :
-
+	![menu_update_manager](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/UpdateManagerPNG.PNG?raw=true)
+	* Puis créer une "baseline" qui match ce que l'on souhaite faire, dans notre cas les patchs seulement :
+	![baseline](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/Baseline.png?raw=true)
+	* Une fois la baseline crée il faut l'attacher à un chaque hôtes ESXI du cluster via le menu "mise à jour" de ceux-çi :
+	![attached_baseline](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/BaselineAttached.PNG?raw=true)
+	* Enfin on peux vérifier la conformité et lancer les mises à jours depuis l'onglet dédier dans le cluster :
+	* On peux aussi creer une tâche automatique de vérification via l'onglet mise à jour du cluster:
+	![MAJ & planifier](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/Planifier.PNG?raw=true)
+	
+	
 * **DRS :**
+DRS permet un bascule de charge automatique sur les différents hôtes ESXI d'un même cluster. 
 
+	* Il suffit d'activer la fonctionnalité et de la configuré pour que celle çi soit en marche :
+	![DRS](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
+	* De la même façon on peux mettre en place une tâche automatique dé vérification DRS : 
+	![DRS setting](https://github.com/Tenebry/Infra_VmWare_4IRC/blob/master/lun.png?raw=true)
+	
 
 * **VMotion :**
 
